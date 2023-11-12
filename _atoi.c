@@ -20,8 +20,8 @@ int check_interactive(info_t *info)
 int is_separator(char c, char *separators)
 {
     while (*separators)
-        if (*separators++ == c)
-            return (1);
+     if (*separators++ == c)
+    return (1);
     return (0);
 }
 
@@ -45,15 +45,15 @@ int _atoi(char *str)
     int i, sign = 1, output = 0;
 
     for (i = 0; str[i] != '\0'; i++)
-    {
-        if (str[i] == '-')
-            sign *= -1;
+     {
+      if (str[i] == '-')
+       sign *= -1;
 
-        if (str[i] >= '0' && str[i] <= '9')
-        {
-            output *= 10;
-            output += (str[i] - '0');
-        }
+      if (str[i] >= '0' && str[i] <= '9')
+      {
+       output *= 10;
+       output += (str[i] - '0');
+      }
     }
 
     return (sign * output);
